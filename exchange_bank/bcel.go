@@ -23,7 +23,12 @@ func BcelExchange(url, a, b string) (*[]modelbank.Item, error) {
 				Id: h.Index,
 				Dateofdate: modelbank.Dateofdate{
 					Id:   e.Index,
-					Date: "",
+					Date: e.ChildAttr("input", "value"),
+				},
+				NumberOftime: modelbank.NumberOftime{
+					Id: e.Index,
+
+					Numberoftime: e.ChildAttr("option", "value"),
 				},
 				Icon:       h.ChildAttr("img", "src"),
 				Currency:   h.ChildText("td:nth-child(3)"),
