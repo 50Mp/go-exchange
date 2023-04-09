@@ -2,7 +2,7 @@ package exchangebank
 
 import (
 	"encoding/json"
-	modelbank "gold-price/model_bank"
+	modelbank "exchange/model_bank"
 	"log"
 	"os"
 

@@ -3,7 +3,8 @@ package exchangebank
 import (
 	"encoding/json"
 	"fmt"
-	modelbank "gold-price/model_bank"
+
+	modelbank "exchange/model_bank"
 	"log"
 	"os"
 

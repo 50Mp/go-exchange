@@ -1,8 +1,8 @@
 package main
 
 import (
+	exchangebank "exchange/exchange_bank"
 	"fmt"
-	exchangebank "gold-price/exchange_bank"
 )
 
 const (
