@@ -1,8 +1,10 @@
 package main
 
 import (
-	exchangebank "exchange/exchange_bank"
-	"fmt"
+	"exchange/repositories"
+
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
 )
 
 const (
@@ -17,14 +19,29 @@ const (
 
 func main() {
 
-	apbEx, _ := exchangebank.ApbExchange(baseUrlApb, apbA, apbB)
-	fmt.Println("apb exchange", apbEx)
-	fmt.Println("=============================================================")
+	db, err := gorm.Open(postgres.New(postgres.Config{
+		DSN:                  "host=localhost user=exchange password=123 dbname=exchangedb port=5432 sslmode=disable TimeZone=Asia/Shanghai",
+		PreferSimpleProtocol: true,
+	}), &gorm.Config{})
 
-	bcelex, _ := exchangebank.BcelExchange(baseUrlBCEL, bcelA, bcelB)
+	if err != nil {
+		panic("failed to connect database")
+	}
 
-	fmt.Println("BCEL exchange", bcelex)
+	// apbEx, _ := exchangebank.ApbExchange(baseUrlApb, apbA, apbB)
+	// fmt.Println("apb exchange", apbEx)
+	// fmt.Println("=============================================================")
 
-	fmt.Println("=============================================================")
+	// bcelex, _ := exchangebank.BcelExchange(baseUrlBCEL, bcelA, bcelB)
+
+	// fmt.Println("BCEL exchange", bcelex)
+
+	// fmt.Println("=============================================================")
+
+	bcelRepo := repositories.NewBankRepository(db, baseUrlBCEL, bcelA, bcelB)
+	err = bcelRepo.CreateBank(baseUrlBCEL, bcelA, bcelB)
+	if err != nil {
+		panic("failed to create data")
+	}
 
 }

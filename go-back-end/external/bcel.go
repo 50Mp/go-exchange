@@ -9,7 +9,7 @@ import (
 	"github.com/gocolly/colly"
 )
 
-func BcelExchange(url, a, b string) (*[]modelbank.Item, error) {
+func BcelExchange(url, a, b string) ([]modelbank.Item, error) {
 
 	c := colly.NewCollector(
 		colly.AllowedDomains(a, b),
@@ -63,5 +63,5 @@ func BcelExchange(url, a, b string) (*[]modelbank.Item, error) {
 		log.Panic("WriteFile", err)
 	}
 
-	return &items, nil
+	return items, nil
 }
