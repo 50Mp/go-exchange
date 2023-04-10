@@ -1,30 +1,30 @@
-package exchangebank
+package external
 
 import (
 	"encoding/json"
+
 	"fmt"
 
-	modelbank "exchange/model_bank"
 	"log"
 	"os"
 
 	"github.com/gocolly/colly"
 )
 
-func ApbExchange(url, a, b string) (*[]modelbank.Item, error) {
+func ApbExchange() (*[]Item, error) {
 
 	c := colly.NewCollector(
-		colly.AllowedDomains(a, b),
+		colly.AllowedDomains(apbA, apbB),
 	)
-	var items []modelbank.Item
+	var items []Item
 	c.OnHTML(".w3_agileits_gain_list", func(
 
 		e *colly.HTMLElement) {
 
 		e.ForEach("tr", func(_ int, h *colly.HTMLElement) {
-			iten := modelbank.Item{
+			iten := Item{
 				Id: h.Index,
-				Dateofdate: modelbank.Dateofdate{
+				Dateofdate: Dateofdate{
 					Id:   e.Index,
 					Date: e.ChildText("h5"),
 				},
@@ -48,7 +48,7 @@ func ApbExchange(url, a, b string) (*[]modelbank.Item, error) {
 		log.Panic("", r.Request.URL, err.Error())
 	})
 
-	c.Visit(url)
+	c.Visit(baseUrlApb)
 
 	fmt.Println(items)
 

@@ -13,5 +13,5 @@ type BankRepositoryModel struct {
 
 type BankRepository interface {
 	CreateBank() error
-	// GetBankCurrency() (*BankRepositoryModel, error)
+	GetBankCurrency() ([]BankRepositoryModel, error)
 }

@@ -1,31 +1,31 @@
-package exchangebank
+package external
 
 import (
 	"encoding/json"
-	modelbank "exchange/model_bank"
+
 	"log"
 	"os"
 
 	"github.com/gocolly/colly"
 )
 
-func BcelExchange(url, a, b string) ([]modelbank.Item, error) {
+func BcelExchange() ([]Item, error) {
 
 	c := colly.NewCollector(
-		colly.AllowedDomains(a, b),
+		colly.AllowedDomains(bcelA, bcelB),
 	)
-	var items []modelbank.Item
+	var items []Item
 
 	c.OnHTML(".col-sm-9", func(e *colly.HTMLElement) {
 		e.ForEach("tr", func(_ int, h *colly.HTMLElement) {
 
-			item := modelbank.Item{
+			item := Item{
 				Id: h.Index,
-				Dateofdate: modelbank.Dateofdate{
+				Dateofdate: Dateofdate{
 					Id:   e.Index,
 					Date: e.ChildAttr("input", "value"),
 				},
-				NumberOftime: modelbank.NumberOftime{
+				NumberOftime: NumberOftime{
 					Id: e.Index,
 
 					Numberoftime: e.ChildAttr("option", "value"),
@@ -50,18 +50,24 @@ func BcelExchange(url, a, b string) ([]modelbank.Item, error) {
 		return
 	})
 
-	c.Visit(url)
+	c.Visit(baseUrlBCEL)
 
-	jsonlist, err := json.Marshal(items)
-	if err != nil {
-		log.Panic("Marshal", err)
+	if len(items) > 0 {
+
+		jsonlist, err := json.Marshal(items)
+		if err != nil {
+			log.Panic("Marshal", err)
+		}
+
+		err = os.WriteFile("../bcel_exchange.json", jsonlist, 0644)
+
+		if err != nil {
+			log.Panic("WriteFile", err)
+		}
+
+		return items, nil
+	} else {
+		log.Println("Scrapping curren failed!", items)
 	}
-
-	err = os.WriteFile("../bcel_exchange.json", jsonlist, 0644)
-
-	if err != nil {
-		log.Panic("WriteFile", err)
-	}
-
-	return items, nil
+	return nil, nil
 }

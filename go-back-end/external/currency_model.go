@@ -1,4 +1,4 @@
-package modelbank
+package external
 
 type Item struct {
 	Id           int          `json:"id"`

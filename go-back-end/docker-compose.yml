@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   db:
-    container_name: postgres_db
+    container_name: postgresdb
     image: postgres:15.2-alpine
     environment:
       POSTGRES_PASSWORD: 123
@@ -12,7 +12,7 @@ services:
     volumes:
       - postgres:/data/postgres
     ports:
-      - 5432 5432
+      - 5432
     networks:
       - db
 
