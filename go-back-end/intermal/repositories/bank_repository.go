@@ -1,14 +1,15 @@
 package repositories
 
 type BankRepositoryModel struct {
-	Id       int `gorm:"primaryKey"`
-	DateTime string
-	TimeDay  int
-	BankName string
-	Icon     string
-	Currency string
-	Sell     uint32
-	Buy      uint32
+	id       int    `gorm:"primaryKey"`
+	index    int    `gorm:"not null"`
+	DateTime string `gorm:"not null"`
+	TimeDay  int    `gorm:"not null"`
+	BankName string `gorm:"not null"`
+	Icon     string `gorm:"not null"`
+	Currency string `gorm:"not null"`
+	Sell     string `gorm:"not null"`
+	Buy      string `gorm:"not null"`
 }
 
 type BankRepository interface {

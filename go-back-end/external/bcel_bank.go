@@ -2,14 +2,14 @@ package external
 
 import (
 	"encoding/json"
-
+	"fmt"
 	"log"
 	"os"
 
 	"github.com/gocolly/colly"
 )
 
-func BcelExchange() ([]Item, error) {
+func BcelExchange() (*[]Item, error) {
 
 	c := colly.NewCollector(
 		colly.AllowedDomains(bcelA, bcelB),
@@ -17,6 +17,7 @@ func BcelExchange() ([]Item, error) {
 	var items []Item
 
 	c.OnHTML(".col-sm-9", func(e *colly.HTMLElement) {
+
 		e.ForEach("tr", func(_ int, h *colly.HTMLElement) {
 
 			item := Item{
@@ -26,24 +27,27 @@ func BcelExchange() ([]Item, error) {
 					Date: e.ChildAttr("input", "value"),
 				},
 				NumberOftime: NumberOftime{
-					Id: e.Index,
-
+					Id:           e.Index,
 					Numberoftime: e.ChildAttr("option", "value"),
 				},
-				Icon:       h.ChildAttr("img", "src"),
-				Currency:   h.ChildText("td:nth-child(3)"),
-				InSideSell: h.ChildText("td:nth-child(4)"),
-				OutSell:    h.ChildText("td:nth-child(5)"),
-				Buy:        h.ChildText("td:nth-child(6)"),
+				BankName: BankName{
+					Id:     e.Index,
+					BkName: "BCEL",
+				},
+				Icon:       fmt.Sprintf("%v%v", bcelA, h.ChildAttr("img", "src")),
+				Currency:   h.ChildText("td:nth-child(4)"),
+				InSideSell: h.ChildText("td:nth-child(5)"),
+				OutSell:    h.ChildText("td:nth-child(6)"),
+				Buy:        h.ChildText("td:nth-child(7)"),
 			}
 
 			items = append(items, item)
 		})
 	})
 
-	c.OnRequest(func(request *colly.Request) {
-		log.Println("Visiting", request.URL.String())
-	})
+	// c.OnRequest(func(request *colly.Request) {
+	// 	log.Println("Visiting", request.URL.String())
+	// })
 
 	c.OnError(func(r *colly.Response, err error) {
 		log.Panic("err :", r.Request.URL, err.Error())
@@ -65,7 +69,7 @@ func BcelExchange() ([]Item, error) {
 			log.Panic("WriteFile", err)
 		}
 
-		return items, nil
+		return &items, nil
 	} else {
 		log.Println("Scrapping curren failed!", items)
 	}

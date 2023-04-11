@@ -1,32 +1,32 @@
 package main
 
 import (
-	"exchange/intermal/config"
-	"exchange/intermal/repositories"
+	"exchange/external"
 	"fmt"
 )
 
 func main() {
 
-	db, err := config.Initdb()
+	// db, err := config.Initdb()
 
-	bcelRepo := repositories.NewBankRepository(db)
-	err = bcelRepo.CreateBank()
-	if err != nil {
-		panic("failed to create data")
-	}
-	excange, err := bcelRepo.GetBankCurrency()
+	// if err != nil {
+	// 	panic("db connect failed")
+	// }
+
+	// bcelRepo := repositories.NewBankRepository(db)
+
+	// err = bcelRepo.CreateBank()
+
+	// if err != nil {
+	// 	log.Fatalln("Create data from API fialed", err)
+
+	// }
+
+	moneyExchange, err := external.BcelExchange()
 
 	if err != nil {
 		panic("Get data failed!")
 	}
 
-	fmt.Println("", excange)
-
-	// _, err := external.BcelExchange()
-
-	// if err != nil {
-	// 	panic(err)
-	// }
-
+	fmt.Println(moneyExchange)
 }
