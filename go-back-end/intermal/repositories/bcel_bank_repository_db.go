@@ -22,11 +22,14 @@ func (db BankRepositoryDb) CreateBank() error {
 	if err != nil {
 		return err
 	}
+
 	currency, err := external.BcelExchange()
 
 	if err != nil {
 		return err
 	}
+
+
 	currencys := []BankRepositoryModel{}
 
 	for index, c := range *currency {
@@ -35,7 +38,7 @@ func (db BankRepositoryDb) CreateBank() error {
 			id:       index,
 			index:    c.Id,
 			DateTime: c.Dateofdate.Date,
-			TimeDay:  c.NumberOftime.Id,
+			Count:    c.Count.Id,
 			BankName: c.BankName.BkName,
 			Icon:     c.Icon,
 			Currency: c.Currency,
@@ -45,7 +48,7 @@ func (db BankRepositoryDb) CreateBank() error {
 		currencys = append(currencys, curren)
 
 	}
-
+	
 	return db.db.Create(&currencys).Error
 
 }

@@ -3,440 +3,396 @@
         "id": 0,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
-        "icon": "www.bcel.com.la",
-        "currency": "",
-        "insidesell": "",
-        "outselle": "",
-        "buy": ""
+        "icon": "www.bcel.com.laresources/imgs/flag/USD.png",
+        "currency": "USD 1-20",
+        "insidesell": "17.042",
+        "outselle": "17.043",
+        "buy": "17.045"
     },
     {
         "id": 1,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
-        "icon": "www.bcel.com.la",
-        "currency": "",
-        "insidesell": "",
-        "outselle": "",
-        "buy": ""
+        "icon": "www.bcel.com.laresources/imgs/flag/USD.png",
+        "currency": "USD 50-100",
+        "insidesell": "17.043",
+        "outselle": "17.043",
+        "buy": "17.045"
     },
     {
         "id": 2,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
-        },
-        "bankname": {
-            "id": 0,
-            "name": "BCEL"
-        },
-        "icon": "www.bcel.com.laresources/imgs/flag/USD.png",
-        "currency": "17.046",
-        "insidesell": "17.047",
-        "outselle": "17.049",
-        "buy": "17.216"
-    },
-    {
-        "id": 3,
-        "dateofday": {
-            "id": 0,
-            "title": "",
-            "date": "2023-04-11"
-        },
-        "numberoftime": {
-            "id": 0,
-            "title": "",
-            "number": "1"
-        },
-        "bankname": {
-            "id": 0,
-            "name": "BCEL"
-        },
-        "icon": "www.bcel.com.laresources/imgs/flag/USD.png",
-        "currency": "17.047",
-        "insidesell": "17.047",
-        "outselle": "17.049",
-        "buy": "17.216"
-    },
-    {
-        "id": 4,
-        "dateofday": {
-            "id": 0,
-            "title": "",
-            "date": "2023-04-11"
-        },
-        "numberoftime": {
-            "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/THB.png",
-        "currency": "505,43",
-        "insidesell": "505,43",
-        "outselle": "505,48",
-        "buy": "510,48"
+        "currency": "THB",
+        "insidesell": "506,49",
+        "outselle": "506,49",
+        "buy": "506,54"
+    },
+    {
+        "id": 3,
+        "dateofday": {
+            "id": 0,
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
+        },
+        "count": {
+            "id": 0,
+            "title": "ຄັ້ງທີ",
+            "count": 1
+        },
+        "bankname": {
+            "id": 0,
+            "name": "BCEL"
+        },
+        "icon": "www.bcel.com.laresources/imgs/flag/EUR.png",
+        "currency": "EUR 1-20",
+        "insidesell": "18.584",
+        "outselle": "18.585",
+        "buy": "18.587"
+    },
+    {
+        "id": 4,
+        "dateofday": {
+            "id": 0,
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
+        },
+        "count": {
+            "id": 0,
+            "title": "ຄັ້ງທີ",
+            "count": 1
+        },
+        "bankname": {
+            "id": 0,
+            "name": "BCEL"
+        },
+        "icon": "www.bcel.com.laresources/imgs/flag/EUR.png",
+        "currency": "EUR 50-500",
+        "insidesell": "18.585",
+        "outselle": "18.585",
+        "buy": "18.587"
     },
     {
         "id": 5,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
-        },
-        "bankname": {
-            "id": 0,
-            "name": "BCEL"
-        },
-        "icon": "www.bcel.com.laresources/imgs/flag/EUR.png",
-        "currency": "18.506",
-        "insidesell": "18.507",
-        "outselle": "18.509",
-        "buy": "18.692"
-    },
-    {
-        "id": 6,
-        "dateofday": {
-            "id": 0,
-            "title": "",
-            "date": "2023-04-11"
-        },
-        "numberoftime": {
-            "id": 0,
-            "title": "",
-            "number": "1"
-        },
-        "bankname": {
-            "id": 0,
-            "name": "BCEL"
-        },
-        "icon": "www.bcel.com.laresources/imgs/flag/EUR.png",
-        "currency": "18.507",
-        "insidesell": "18.507",
-        "outselle": "18.509",
-        "buy": "18.692"
-    },
-    {
-        "id": 7,
-        "dateofday": {
-            "id": 0,
-            "title": "",
-            "date": "2023-04-11"
-        },
-        "numberoftime": {
-            "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/GBP.png",
-        "currency": "20.994",
-        "insidesell": "20.994",
-        "outselle": "20.996",
-        "buy": "21.414"
+        "currency": "GBP",
+        "insidesell": "21.052",
+        "outselle": "21.052",
+        "buy": "21.054"
     },
     {
-        "id": 8,
+        "id": 6,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/AUD.png",
-        "currency": "11.277",
-        "insidesell": "11.277",
-        "outselle": "11.279",
-        "buy": "11.513"
+        "currency": "AUD",
+        "insidesell": "11.284",
+        "outselle": "11.284",
+        "buy": "11.286"
     },
     {
-        "id": 9,
+        "id": 7,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/CAD.png",
-        "currency": "11.728",
-        "insidesell": "11.728",
-        "outselle": "11.730",
-        "buy": "11.999"
+        "currency": "CAD",
+        "insidesell": "11.761",
+        "outselle": "11.761",
+        "buy": "11.763"
     },
     {
-        "id": 10,
+        "id": 8,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/JPY.png",
-        "currency": "127,84",
-        "insidesell": "127,84",
-        "outselle": "127,9",
-        "buy": "130,39"
+        "currency": "JPY",
+        "insidesell": "127,61",
+        "outselle": "127,61",
+        "buy": "127,67"
     },
     {
-        "id": 11,
+        "id": 9,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/CHF.png",
-        "currency": "17.237",
-        "insidesell": "17.237",
-        "outselle": "17.239",
-        "buy": "17.582"
+        "currency": "CHF",
+        "insidesell": "17.342",
+        "outselle": "17.342",
+        "buy": "17.344"
     },
     {
-        "id": 12,
+        "id": 10,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/CNY.png",
-        "currency": "2.465",
-        "insidesell": "2.465",
-        "outselle": "2.467",
-        "buy": "2.489"
+        "currency": "CNY",
+        "insidesell": "2.464",
+        "outselle": "2.464",
+        "buy": "2.466"
     },
     {
-        "id": 13,
+        "id": 11,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/DKK.png",
-        "currency": "-",
+        "currency": "DKK",
         "insidesell": "-",
-        "outselle": "2.595",
-        "buy": "2.646"
+        "outselle": "-",
+        "buy": "2.606"
     },
     {
-        "id": 14,
+        "id": 12,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/NOK.png",
-        "currency": "-",
+        "currency": "NOK",
         "insidesell": "-",
-        "outselle": "1.755",
-        "buy": "1.790"
+        "outselle": "-",
+        "buy": "1.749"
     },
     {
-        "id": 15,
+        "id": 13,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/SEK.png",
-        "currency": "-",
+        "currency": "SEK",
         "insidesell": "-",
-        "outselle": "1.939",
-        "buy": "1.977"
+        "outselle": "-",
+        "buy": "1.947"
     },
     {
-        "id": 16,
+        "id": 14,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/SGD.png",
-        "currency": "12.114",
-        "insidesell": "12.114",
-        "outselle": "12.116",
-        "buy": "12.355"
+        "currency": "SGD",
+        "insidesell": "12.107",
+        "outselle": "12.107",
+        "buy": "12.109"
     },
     {
-        "id": 17,
+        "id": 15,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/HKD.png",
-        "currency": "-",
+        "currency": "HKD",
         "insidesell": "-",
-        "outselle": "2.553",
-        "buy": "2.604"
+        "outselle": "-",
+        "buy": "2.553"
     },
     {
-        "id": 18,
+        "id": 16,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/VND.png",
-        "currency": "-",
+        "currency": "VND",
         "insidesell": "-",
-        "outselle": "0,7564",
-        "buy": "0,7715"
+        "outselle": "-",
+        "buy": "0,7562"
     },
     {
-        "id": 19,
+        "id": 17,
         "dateofday": {
             "id": 0,
-            "title": "",
-            "date": "2023-04-11"
+            "title": "ວັນທີ",
+            "date": "2023-04-12"
         },
-        "numberoftime": {
+        "count": {
             "id": 0,
-            "title": "",
-            "number": "1"
+            "title": "ຄັ້ງທີ",
+            "count": 1
         },
         "bankname": {
             "id": 0,
             "name": "BCEL"
         },
         "icon": "www.bcel.com.laresources/imgs/flag/KRW.png",
-        "currency": "11,87",
-        "insidesell": "11,87",
-        "outselle": "11,92",
-        "buy": "12,1"
+        "currency": "KRW",
+        "insidesell": "11,83",
+        "outselle": "11,83",
+        "buy": "11,88"
     }
 ]
