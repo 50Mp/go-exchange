@@ -14,10 +14,10 @@ services:
     ports:
       - 5432
     networks:
-      - db
+      - database
 
 networks:
-  db:
+  database:
     driver: bridge
 volumes:
   postgres:
