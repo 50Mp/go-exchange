@@ -11,8 +11,3 @@ type BankRepositoryModel struct {
 	Sell     string `gorm:"not null"`
 	Buy      string `gorm:"not null"`
 }
-
-type BankRepository interface {
-	CreateBank() error
-	GetBankCurrency() ([]BankRepositoryModel, error)
-}

@@ -1,19 +1,21 @@
 package main
 
 import (
-	"exchange/external"
+	"exchange/intermal/config"
+	"exchange/intermal/repositories"
 	"fmt"
+	"log"
 )
 
 func main() {
 
-	// db, err := config.Initdb()
+	db, err := config.Initdb()
 
-	// if err != nil {
-	// 	panic("db connect failed")
-	// }
+	if err != nil {
+		panic("db connect failed")
+	}
 
-	// bcelRepo := repositories.NewBankRepository(db)
+	bcelRepo := repositories.NewBankRepositoryBCEL(db)
 
 	// err = bcelRepo.CreateBank()
 
@@ -22,11 +24,31 @@ func main() {
 
 	// }
 
-	moneyExchange, err := external.BcelExchange()
+	fmt.Println("insert sussessfull")
 
+	exchaneg, err := bcelRepo.GetBankCurrencyBCEL("LDB", 1, "USD")
 	if err != nil {
-		panic("Get data failed!")
+		log.Fatalln("Sellect currency fialed", err)
+
 	}
 
-	fmt.Println(moneyExchange)
+	fmt.Println(exchaneg)
+
+	// moneyExchange, err := external.BcelExchange()
+
+	// if err != nil {
+	// 	log.Println("Get data failed!")
+	// }
+
+	// for i := 0; i < time.Now().Second(); i++ {
+
+	// 	time.Sleep(time.Second)
+	// 	fmt.Println(moneyExchange)
+	// 	fmt.Println("=================================================", i)
+	// 	fmt.Println(time.Now().Second())
+
+	// }
+
 }
+
+// 2008-01-21

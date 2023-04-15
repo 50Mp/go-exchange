@@ -1,12 +1,10 @@
 package external
 
 import (
-	"encoding/json"
-
+	"errors"
 	"fmt"
 
 	"log"
-	"os"
 
 	"github.com/gocolly/colly"
 )
@@ -28,7 +26,7 @@ func ApbExchange() (*[]Item, error) {
 					Id:   e.Index,
 					Date: e.ChildText("h5"),
 				},
-				Icon:       h.ChildAttr("img", "src"),
+				Icon:       fmt.Sprintf("%v/%v", apbA, h.ChildAttr("img", "src")),
 				Currency:   h.ChildText("th"),
 				InSideSell: h.ChildText("td:nth-child(2)"),
 				OutSell:    h.ChildText("td:nth-child(3)"),
@@ -40,10 +38,6 @@ func ApbExchange() (*[]Item, error) {
 
 	})
 
-	c.OnRequest(func(request *colly.Request) {
-		log.Println("Visiting", request.URL.String())
-	})
-
 	c.OnError(func(r *colly.Response, err error) {
 		log.Panic("", r.Request.URL, err.Error())
 	})
@@ -52,16 +46,11 @@ func ApbExchange() (*[]Item, error) {
 
 	fmt.Println(items)
 
-	jsonlist, err := json.Marshal(items)
-	if err != nil {
-		log.Panic("Marshal", err)
+	if len(items) > 0 {
+		err := CreateJsonFile(items, "../apb.json")
+		return &items, err
+	} else {
+		// log.Println("Scrapping curren failed!", items)
+		return nil, errors.New("Scrapping curren failed!")
 	}
-
-	err = os.WriteFile("../apb_exchange.json", jsonlist, 0644)
-
-	if err != nil {
-		log.Panic("WriteFile", err)
-	}
-
-	return &items, nil
 }

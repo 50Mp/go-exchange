@@ -1,5 +1,14 @@
 package external
 
+type Name string
+
+const (
+	bcel Name = "BCEL"
+	ldb  Name = "LDB"
+	jdb  Name = "JDB"
+	kpv  Name = "KPV"
+)
+
 type Item struct {
 	Id         int        `json:"id"`
 	Dateofdate Dateofdate `json:"dateofday"`
@@ -28,3 +37,5 @@ type Count struct {
 	Title string `json:"title"`
 	Count int    `json:"count"`
 }
+
+

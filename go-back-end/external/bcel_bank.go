@@ -9,11 +9,22 @@ import (
 	"github.com/gocolly/colly"
 )
 
-func BcelExchange() (*[]Item, error) {
+type BCELExternalColly struct {
+	*colly.Collector
+}
+type BCELExternalInterface interface {
+	BcelExchange() (*[]Item, error)
+}
 
-	c := colly.NewCollector(
-		colly.AllowedDomains(bcelA, bcelB),
-	)
+func NewBCEL() BCELExternalInterface {
+	return BCELExternalColly{}
+}
+
+func (c BCELExternalColly) BcelExchange() (*[]Item, error) {
+
+	colly.AllowedDomains(bcelA, bcelB)
+
+	c.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 
 	items := []Item{}
 
@@ -24,6 +35,7 @@ func BcelExchange() (*[]Item, error) {
 			b.ForEach("tr", func(_ int, h *colly.HTMLElement) {
 
 				co, _ := strconv.Atoi(e.ChildAttr("option", "value"))
+
 				item := Item{
 					Id: h.Index,
 					Dateofdate: Dateofdate{
@@ -38,9 +50,9 @@ func BcelExchange() (*[]Item, error) {
 					},
 					BankName: BankName{
 						Id:     e.Index,
-						BkName: "BCEL",
+						BkName: string(bcel),
 					},
-					Icon:       fmt.Sprintf("%v%v", bcelA, h.ChildAttr("img", "src")),
+					Icon:       fmt.Sprintf("%s/%s", bcelA, h.ChildAttr("img", "src")),
 					Currency:   h.ChildText("td:nth-child(3)"),
 					InSideSell: h.ChildText("td:nth-child(4)"),
 					OutSell:    h.ChildText("td:nth-child(5)"),
@@ -57,17 +69,19 @@ func BcelExchange() (*[]Item, error) {
 	// })
 
 	c.OnError(func(r *colly.Response, err error) {
-		log.Panic("request data in the URL :", r.Request.URL, err.Error())
+
+		log.Panic("request data in the URL :", err.Error(), "Statust Code :", r.StatusCode)
 		return
 	})
 
 	c.Visit(baseUrlBCEL)
 
 	if len(items) > 0 {
-		err := CreaeJsonFile(items)
+		err := CreateJsonFile(items, "../bcel.json")
 		return &items, err
 	} else {
 		// log.Println("Scrapping curren failed!", items)
+
 		return nil, errors.New("Scrapping curren failed!")
 	}
 

@@ -6,17 +6,17 @@ import (
 	"os"
 )
 
-func CreaeJsonFile(items []Item) error {
+func CreateJsonFile(items []Item, jsomName string) error {
 
 	jsonlist, err := json.Marshal(items)
-	for i:= 0; i <2 ; i++ {
-		
+	for i := 0; i < 2; i++ {
+
 	}
 	if err != nil {
 		log.Panic("Marshal", err)
 	}
 
-	err = os.WriteFile("../bcel_exchange.json", jsonlist, 0644)
+	err = os.WriteFile(jsomName, jsonlist, 0644)
 
 	if err != nil {
 		log.Panic("WriteFile", err)
